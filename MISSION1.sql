@@ -1,5 +1,6 @@
 /* Mission1
 Etapes1   creation de la base de donne */
+DROP DATABASE educore_tp;
 CREATE DATABASE educore_tp;
 USE educore_tp;
 
@@ -49,8 +50,8 @@ CREATE TABLE payments (
         ON UPDATE CASCADE
 );
 /*Etapes6   verificationd rapides */
-INSERT INTO users (nom, email) VALUES('Awa2', 'awa@gmail.com');
-INSERT INTO users (nom, email) VALUES('Awaou', 'awa@gmail.com'); 
-INSERT INTO courses (titres, prix) VALUES('SQL Avancé',49,99);
-INSERT INTO enrollments(users_id, course_id,progress) VALUE (1, 1, 120);
-
+/*INSERT INTO users (nom, email) VALUES('Awa2', 'awa@gmail.com');
+INSERT INTO users (nom, email) VALUES('Awaou', 'awa@gmail.com');
+INSERT INTO courses (titre, prix) VALUES('SQL Avancé',49.99);
+INSERT INTO enrollments(user_id, course_id,progress) VALUE (1, 1, 20);*/
+  
