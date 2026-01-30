@@ -1,22 +1,23 @@
 /* Mission2
 
 Etapes1   
- Insertion (10 users, 6 courses, 15 enrollments, 10+ payments)*/
+ Insertion (10 users, 6 courses, 15 enrollments, 10+ payments)  */
+ 
 INSERT INTO users (nom, email) VALUES
-('Awa', 'awa@test.com'),
-('Kassira', 'kassira@test.com'),
-('Mariam', 'mariam@test.com'),
-('Ibrahim', 'ibrahim@test.com'),
-('Sarah', 'sarah@test.com'),
-('Yanis', 'yanis@test.com'),
-('Fatou', 'fatou@test.com'),
-('Nina', 'nina@test.com'),
-('Ousmane', 'ousmane@test.com'),
-('Lea', 'lea@test.com');
+('Awa', 'awa@gmail.com'),
+('Kassira', 'kassira@gmail.com'),
+('Mariam', 'mariam@gmail.com'),
+('Ibrahim', 'ibrahim@gmail.com'),
+('Sarah', 'sarah@gmail.com'),
+('Yanis', 'yanis@gmail.com'),
+('Fatou', 'fatou@gmail.com'),
+('Nina', 'nina@gmail.com'),
+('Ousmane', 'ousmane@gmail.com'),
+('Lea', 'lea@gmail.com');
 
 INSERT INTO courses (titre, prix) VALUES
-('SQL Débutant', 19.99),
-('SQL Avancé', 49.99),
+('SQL Debutant', 19.99),
+('SQL Avance', 49.99),
 ('Python Débutant', 29.99),
 ('Data Analysis', 59.99),
 ('Web Basics', 24.99),
@@ -49,10 +50,10 @@ INSERT INTO payments (user_id, amount) VALUES
 (5, 29.99),
 (6, 49.99),
 (7, 24.99),
-(9, 29.99);
+(9, 29.99); 
 
-/* Etapes2  */
-/* 1) Compter chaque table */
+/* Etapes2  
+1) Compter chaque table*/
 SELECT 'users' AS table_name, COUNT(*) AS total FROM users
 UNION ALL
 SELECT 'courses', COUNT(*) FROM courses
@@ -60,6 +61,7 @@ UNION ALL
 SELECT 'enrollments', COUNT(*) FROM enrollments
 UNION ALL
 SELECT 'payments', COUNT(*) FROM payments;
+
 
 
 /* 2) Vérifier si aucun enrollment avec progress < 0 ou > 100 */
@@ -79,3 +81,4 @@ WHERE u.id IS NULL OR c.id IS NULL;
 SELECT COUNT(*) AS non_positive_payments
 FROM payments
 WHERE amount <= 0;
+
